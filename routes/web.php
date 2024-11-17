@@ -1,7 +1,8 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\House;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $categories = Category::all();
+    $houses = House::with(['category', 'photos'])->paginate(6); // Carga anticipada de photos y category
+    return view('welcome', compact('categories', 'houses'));
+})->name("home");
