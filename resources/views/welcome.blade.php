@@ -18,7 +18,7 @@
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}" 
                                 {{ request('category') == $category->id ? 'selected' : '' }}>
-                            {{ $category->name }}
+                            {{ $category->category }}
                         </option>
                     @endforeach
                 </select>
@@ -52,6 +52,6 @@
                 </div>
             @endforelse
         </div>
-
-        <!-- Paginación -->
-        <div class="d
+    </div>
+</body>
+</html>
