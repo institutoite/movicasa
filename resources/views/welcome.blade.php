@@ -38,7 +38,7 @@
         }
         .hero {
             background: url('terreno.jpg') no-repeat center center/cover;
-            height: 50vh;
+            height: 5vh;
             color: white;
             display: flex;
             justify-content: center;
@@ -106,6 +106,7 @@
     <a href="#disponibles">Terrenos Disponibles</a>
     <a href="#sobre-nosotros">Sobre Nosotros</a>
     <a href="#testimonios">Testimonios</a>
+    <a class="whatsapp" href="{{ url('admin/login') }}">Login</a>
 </nav>
 
 <section class="hero">
@@ -154,10 +155,7 @@
     </blockquote>
 </section>
 
-<section class="login-section">
-    <h2>Login</h2>
-    <button class="btn-login">Iniciar Sesión</button>
-</section>
+
 
 <section id="redes-sociales">
     <h2>Redes Sociales</h2>

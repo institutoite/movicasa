@@ -53,10 +53,9 @@ class HouseResource extends Resource
                 Select::make('category_id')
                     ->label('Categoría')
                     ->relationship('category', 'category') // Asume que tienes una relación definida en tu modelo
-                    ->searchable()
+                    // ->searchable()
                     ->placeholder('Selecciona una categoría')
                     ->required()
-                    ->default(null)
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('address')
                     ->required()
@@ -96,7 +95,6 @@ class HouseResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('longitud')
                     ->label('Longitud')
-                    ->required()
                     ->numeric()
                     ->step('0.000001') // Permite varios decimales para mayor precisión
                     ->placeholder('Ingrese la longitud')
@@ -107,7 +105,6 @@ class HouseResource extends Resource
                 
                 Forms\Components\TextInput::make('latitud')
                     ->label('Latitud')
-                    ->required()
                     ->numeric()
                     ->step('0.000001') // Permite varios decimales para mayor precisión
                     ->placeholder('Ingrese la latitud')
