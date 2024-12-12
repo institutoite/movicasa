@@ -106,7 +106,7 @@
     <a href="#disponibles">Terrenos Disponibles</a>
     <a href="#sobre-nosotros">Sobre Nosotros</a>
     <a href="#testimonios">Testimonios</a>
-    <a class="whatsapp" href="{{ url('admin/login') }}">Login</a>
+    <a class="" href="{{ url('admin/login') }}">Login</a>
 </nav>
 
 <section class="hero">
