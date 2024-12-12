@@ -15,6 +15,6 @@ class House extends Model
     }
     public function photos()
     {
-        return $this->hasMany(Photo::class);
+        return $this->hasMany(photo::class);
     }
 }
