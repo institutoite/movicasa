@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Tables\Actions\Action;
 use Filament\Forms\Components\FileUpload;
-use App\Models\Photo;
+use App\Models\photo;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Illuminate\Database\Eloquent\Collection;
@@ -196,7 +196,7 @@ class HouseResource extends Resource
                 ->action(function (House $record, array $data) {
                     if (!empty($data['photos'])) {
                         foreach ($data['photos'] as $photoPath) {
-                            Photo::create([
+                            photo::create([
                                 'house_id' => $record->id,
                                 'path' => $photoPath,
                             ]);
