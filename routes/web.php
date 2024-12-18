@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HouseController;
 use App\Models\House;
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
     $houses = House::with(['category', 'photos'])->paginate(6); // Carga anticipada de photos y category
     return view('welcome', compact('categories', 'houses'));
 })->name("home");
+
+Route::get('/houses/{house}', [HouseController::class, 'show'])->name('houses.show');

@@ -103,9 +103,6 @@
 <body>
 
 <nav>
-    <a href="#disponibles">Terrenos Disponibles</a>
-    <a href="#sobre-nosotros">Sobre Nosotros</a>
-    <a href="#testimonios">Testimonios</a>
     <a class="" href="{{ url('admin/login') }}">Login</a>
 </nav>
 
@@ -129,7 +126,7 @@
                             <p><strong>Precio:</strong> Bs. {{ number_format($house->price, 2) }}</p>
                             <p><strong>Habitaciones:</strong> {{ $house->bedrooms }} | <strong>Baños:</strong> {{ $house->bathrooms }}</p>
                             <p><strong>Categoría:</strong> {{ $house->category->name ?? 'Sin categoría' }}</p>
-                            <a href="#" class="btn btn-info">Ver detalles</a>
+                            <a href="{{ route('houses.show', $house->id) }}" class="btn btn-info">Ver detalles</a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +168,7 @@
     <p>&copy; 2024 Movicasa. Todos los derechos reservados.</p>
 </footer>
 
-<a href="https://wa.me/123456789" class="whatsapp" target="_blank">&#x1F4AC;</a>
+<a href="https://wa.me/59172655998" class="whatsapp" target="_blank">&#x1F4AC;</a>
 
 </body>
 </html>
