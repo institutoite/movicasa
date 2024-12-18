@@ -11,7 +11,7 @@
     
     <div class="container mt-5">
         <h1 class="text-center text-primary">{{ $house->title }}</h1>
-        {{-- <p class="text-center text-secondary"><strong>Categoría:</strong> {{ $house->category->categoria ?? 'Sin categoría' }}</p> --}}
+        <p class="text-center text-secondary"><strong>Categoría:</strong> {{ $house->category->category ?? 'Sin categoría' }}</p>
 
         <!-- Carrusel de imágenes -->
         @if ($house->photos->isNotEmpty())
@@ -52,11 +52,13 @@
                     @if ($house->latitud && $house->longitud)
                     <li class="list-group-item"><strong>Coordenadas:</strong> Latitud {{ $house->latitud }}, Longitud {{ $house->longitud }}</li>
                     @endif
+
                 </ul>
             </div>
         </div>
         <div class="text-center">
-            <a href="{{ route('home') }}" class="btn btn-secondary">Volver al atras</a>
+            <a href="{{ route('home') }}" class="btn btn-danger">Volver atrás</a>
+            <a href="https://wa.me/59172655998" class="btn btn-success" target="_blank">Reservar</a>
         </div>
         <!-- Botón de regreso -->
     </div>
